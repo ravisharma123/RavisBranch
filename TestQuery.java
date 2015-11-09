@@ -18,10 +18,13 @@ public class TestQuery {
         	stmt = conn.createStatement();
         	QuerySet q = new QuerySet();
                 QuerySet q2 = new QuerySet();
+                            QuerySet q3 = new QuerySet();
+
         	//View inventory
-        	System.out.println(q.view_inventory(stmt));
+        	    System.out.println(q.view_inventory(stmt));
                 System.out.println(q2.login(stmt, 1001,"123john4"));
-        	
+        	    System.out.println(q3.signUp(stmt));
+
         	
         	
         	

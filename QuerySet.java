@@ -31,5 +31,22 @@ public class QuerySet {
             }
             else return "You have succesfully logged in";
         }
+          public String signUp(Statement stmt) throws SQLException
+        {
+             String firstName="Lihao";
+             String lastName= "Lee";
+             String password = "123lihao";
+             String jobPosition ="Software Engineer";
+             
+             int rs = stmt.executeUpdate(
+            "INSERT INTO employee(first_name,last_name,password,level) VALUES('"+firstName+"','"+lastName+"','"
+             +password+"','"+jobPosition+"');"
+             );
+		
+            if(rs==0){
+                return "Please try signing up again";
+            }
+            else return "You have succesfully created an account";
+        }
 	
 }
